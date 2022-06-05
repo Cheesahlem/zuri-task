@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registeration</title>
+	<link rel="stylesheet" type="text/css" href="zuri.css">
+</head>
+<body>
+
+	<nav>
+		<div class="head">
+			<h2>ABOUT CHISALEM</h2>
+		</div>
+
+		<div class="anchor">
+				<a href="about.html">ABOUT ME</a>
+			
+				<a href="Contact.html">CONTACT ME</a>
+				
+				<a href="register.html">REGISTER</a>
+				
+				<a href="login.html">LOGIN</a>
+			
+		</div>
+	</nav>
+
+	<div class="form">
+		<form action="#">
+			<label>First name:</label>
+			<br>
+			<input type="text" name="name" placeholder="First-name"required>
+			<br>
+
+			<label>Last Name:</label>
+			<br>
+			<input type="Name" placeholder="Last-name" required>
+			<br>
+
+			<label>Phone number:</label>
+			<br>
+			<input type="number"  placeholder="Phone number" required>
+			<br>
+
+			<label for="gender" placeholder="Gender">Gender</label>
+			<br>
+			<select name="gender">
+				<option value="Choose">Choose</option>
+				<option value="Female">Female</option>
+				<option value="Male">Male</option>
+				<option value="Other">Other</option>
+			</select>
+			<br>
+
+			<label>Country:</label>
+			<br>
+			<input type="Country" name="Country" placeholder="Input Country" required>
+			<br>
+
+			<label>State/Province:</label>
+			<br>
+			<input type="State" name="State" placeholder="State" required >
+			<br>
+
+			<label>Email address:</label>
+			<br>
+			<input type="Email" name="Email" required placeholder="Email address">
+			<br>
+
+			<label>Password:</label>
+			<br>
+			<input type="Password" name="password" pattern="(?=.*/d) (?=.*[a-z]) (?=.*[A-Z]).{8,}" title="must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+			<br>
+
+			<label>Confirm Password:</label>
+			<br>
+			<input type="password" name="Confirm"  pattern="(?=.*/d) (?=.*[a-z]) (?=.*[A-Z]).{8,}">
+			<br>
+
+			<button>Register</button>
+		</form>
+
+		<div>
+			<p>
+				Already have an account? <a href="login.html">Login here</a>
+			</p>
+		</div>
+
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,103 @@
+body{
+	font-family: helvetica;
+	line-height: 25px;
+}
+
+nav {
+	max-width: 600px;
+	margin: 30px auto;
+	position: relative;
+}
+
+/* This is for the anchor tags */
+.anchor {
+	justify-content: space-around;
+    display: flex;   
+}
+a {
+	color: #0d5e1eb5;
+}
+
+a:hover {
+	color: orange;
+}
+
+/* This is for the contents of about me page */
+.everything {
+	max-width: 1000px;
+	font-size: 17px;
+	margin: auto;
+	box-shadow: 0 10px 30px 4px rgba(0,0,0,0.1);
+	padding: 20px;
+}
+ /*This is for the image in about me page*/
+#intro-pic {
+	margin-top: -350px;
+    margin-right: 20px;
+    text-align: right;
+}
+
+ /*This is for the image in about me page*/
+ img {
+ 	width:400px;
+ 	margin-top: -150px;
+}
+
+/* This is for the contact me button in the about me page*/
+button#Contact {
+	font-size: 18pt;
+    border: none;
+    border-radius: 20px;
+    background-color: #0d5e1eb5;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    outline: chocolate;
+    font-family: serif;
+    width: 400px;
+}
+
+/*This is for the register form*/
+.form {
+	max-width: 600px;
+	margin: 50px auto;
+	position: relative;
+	box-shadow: 0 10px 30px 4px rgba(0,0,0,0.1);
+	padding: 30px;
+}
+
+/* This is for the register button */
+.form button {
+	background: #0000ff30;
+	color: #7e2121;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 20px;
+	display: inline-block;
+    border: 1px solid orange;
+    padding: 8px;
+    font-size: 14pt;
+
+}
+
+/*This is for all inputs*/
+ input {
+ 	border-color: darkgreen;
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    border-top: hidden;
+    border-right: hidden;
+    border-left: hidden;
+ }
+
+/*This is for the message box textarea*/
+textarea {
+	border-color: darkgreen;
+    border-radius: 10px;
+}
+
+/* This is for all input labels */
+label {
+	color: darkgreen;
+}
