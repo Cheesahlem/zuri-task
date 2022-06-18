@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registeration</title>
@@ -39,7 +39,7 @@
 
 			<label>Phone number:</label>
 			<br>
-			<input type="number"  placeholder="Phone number" required>
+			<input type="text"  placeholder="Phone number" required>
 			<br>
 
 			<label for="gender" placeholder="Gender">Gender</label>
@@ -64,20 +64,23 @@
 
 			<label>Email address:</label>
 			<br>
-			<input type="Email" name="Email" required placeholder="Email address">
+			<input type="Email" name="Email" required placeholder="e.g welcome@yahoo.com">
 			<br>
 
 			<label>Password:</label>
 			<br>
-			<input type="Password" name="password" pattern="(?=.*/d) (?=.*[a-z]) (?=.*[A-Z]).{8,}" title="must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+			<input type="Password" id="pass" name="password" placeholder="Input password"  required>
 			<br>
 
 			<label>Confirm Password:</label>
 			<br>
-			<input type="password" name="Confirm"  pattern="(?=.*/d) (?=.*[a-z]) (?=.*[A-Z]).{8,}">
+			<input id="confirm_pass" type="password" name="Confirm" placeholder="Confirm password" required onkeyup="validate_password()">
 			<br>
 
-			<button>Register</button>
+			<span style="font-size: 10px; font-style: italic;" id="wrong_pass_alert"></span>
+			<br>
+
+			<button action="#" id="create" onclick="wrong_pass_alert()">Register</button>
 		</form>
 
 		<div>
@@ -88,5 +91,34 @@
 
 	</div>
 	
+	<script type="text/javascript">
+		function validate_password() {
+			var pass = document.getElementById("pass").value;
+			var confirm_pass = document.getElementById("confirm_pass").value;
+
+			if (pass != confirm_pass) {
+				document.getElementById("wrong_pass_alert").style.color = "red";
+				document.getElementById("wrong_pass_alert").innerHTML = "Use same password";
+				document.getElementById("create").disabled = true;
+				document.getElementById("create").style.opacity = (0.4);
+			} else {
+				document.getElementById("wrong_pass_alert").style.color = "green";
+				document.getElementById("wrong_pass_alert").innerHTML = "Password matched";
+				document.getElementById("create").disabled = false;
+				document.getElementById("create").style.opacity = (1);
+			}
+		}
+
+		function wrong_pass_alert() {
+			if (document.getElementById("pass").value != "" &&
+				document.getElementById("confirm_pass").value != "") {
+				alert("Your response is submitted");
+			} else {
+				alert("Please fill all the required fields");
+			}
+
+		}
+
+	</script>
 </body>
 </html>
